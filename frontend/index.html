@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>张万杰</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body>
+  <!-- 加载中 -->
+  <div id="loading" class="loading">
+    <div class="spinner"></div>
+    <p>加载中…</p>
+  </div>
+
+  <!-- 登录页 -->
+  <div id="login" class="login-wrap hidden">
+    <div class="login-card">
+      <h1 class="shop-name">张万杰</h1>
+      <p class="sub">线上电商后台管理</p>
+      <form id="login-form">
+        <input class="input" name="username" placeholder="用户名" autofocus>
+        <input class="input" type="password" name="password" placeholder="密码">
+        <button type="submit" class="btn btn-primary btn-block">登 录</button>
+      </form>
+      <p class="hint">默认管理员 admin / admin123</p>
+    </div>
+  </div>
+
+  <!-- 主界面 -->
+  <div id="app" class="hidden">
+    <aside class="sidebar">
+      <div class="logo shop-name">张万杰</div>
+      <nav>
+        <a href="#/products" data-nav="products" data-perm="products:view">商品 / 库存</a>
+        <a href="#/purchase" data-nav="purchase" data-perm="products:view">进货入库</a>
+        <a href="#/stockout" data-nav="stockout" data-perm="products:view">出货出库</a>
+        <a href="#/orders" data-nav="orders" data-perm="orders:view">收银 / 订单</a>
+        <a href="#/members" data-nav="members" data-perm="members:view">会员管理</a>
+        <a href="#/reviews" data-nav="reviews" data-perm="reviews:view">商品评价</a>
+        <a href="#/reports" data-nav="reports" data-perm="reports:view">销售报表</a>
+        <a href="#/users" data-nav="users" data-perm="users:view">用户管理</a>
+        <a href="#/roles" data-nav="roles" data-perm="roles:view">角色权限</a>
+        <a href="#/system" data-nav="system" data-perm="system:view">系统设置</a>
+      </nav>
+      <button id="logout" class="btn btn-ghost">退出登录</button>
+    </aside>
+    <main class="content" id="content"></main>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/views/products.js"></script>
+  <script src="js/views/purchase.js"></script>
+  <script src="js/views/stockout.js"></script>
+  <script src="js/views/orders.js"></script>
+  <script src="js/views/members.js"></script>
+  <script src="js/views/reviews.js"></script>
+  <script src="js/views/reports.js"></script>
+  <script src="js/views/users.js"></script>
+  <script src="js/views/roles.js"></script>
+  <script src="js/views/system.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
